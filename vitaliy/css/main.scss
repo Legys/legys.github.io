@@ -164,8 +164,10 @@ body{
 .timer {
   flex-basis: 292px;
   @media  screen  and (min-device-width : 320px) {
-
     justify-content: center;
+  }
+  @media  screen  and (min-device-width : 833px) {
+    padding-left: 25px;
   }
 }
 .timer__pdf {
@@ -318,7 +320,7 @@ body{
   font-size: 27px;
   font-weight: 100;
   @media screen and (max-width: 580px) {
-    font-size: 2vh;
+    font-size: 3vh;
   }
   @media screen and (max-width: 320px) {
     font-size: 18px;

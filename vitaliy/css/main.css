@@ -181,6 +181,12 @@ body {
   }
 }
 
+@media screen and (min-device-width: 833px) {
+  .timer {
+    padding-left: 25px;
+  }
+}
+
 .timer__pdf {
   flex-basis: 456px;
 }
@@ -363,7 +369,7 @@ body {
 
 @media screen and (max-width: 580px) {
   .advantages__text {
-    font-size: 2vh;
+    font-size: 3vh;
   }
 }
 
