@@ -1,6 +1,10 @@
+$middleWidth:  837px;
 body{
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  @media screen and (min-width: 320px) {
+    overflow-x: hidden;
+  }
 }
 .container {
   max-width: 890px;
@@ -71,10 +75,15 @@ body{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
   align-content: center;
   margin: auto;
   margin-top: 0px;
   margin-bottom: 40px;
+  @media screen and (max-width: $middleWidth) {
+
+    justify-content: center;
+  }
 
 }
 .heading__video {
@@ -82,6 +91,10 @@ body{
   display: flex;
   height: 235px;
   background-color: #f2f2f2;
+  @media screen and (max-width: $middleWidth) {
+    flex-basis: 100%;
+    margin-bottom: 40px;
+  }
 
 }
 /*
@@ -91,11 +104,15 @@ body{
   }
 */
 .heading__form {
-  flex-basis: 406px;
+  flex-basis:  406px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
 
+  @media screen and (max-width: $middleWidth) {
+    min-height: 225px;
+    margin-bottom: 40px;
+  }
 
   input {
     display: flex;
@@ -137,10 +154,19 @@ body{
   margin: auto;
   max-width: 815px;
 
+  @media screen and (max-width: 663px) {
+  justify-content: center;
+  }
+
+
 
 }
 .timer {
   flex-basis: 292px;
+  @media  screen  and (min-device-width : 320px) {
+
+    justify-content: center;
+  }
 }
 .timer__pdf {
   flex-basis: 456px;
@@ -149,7 +175,7 @@ body{
   color: white;
   margin: 0;
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   font-family: Roboto;
   font-size: 23px;
   font-weight: 400;
@@ -159,7 +185,7 @@ body{
   border: 1px solid white;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
-  padding: 28px 50px 28px 0px;
+  padding: 18px 50px 18px 0px;
   color: white;
   display: flex;
   justify-content: flex-end;
@@ -173,6 +199,9 @@ body{
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  @media screen and (max-width: 463px) {
+    background-size: 100%;
+  }
 
 /*  margin-top: 70px; */
   background: url(../img/pdf-hand.png) no-repeat;
@@ -186,6 +215,14 @@ body{
   font-family: Roboto;
   font-size: 17px;
   font-weight: 400;
+
+  @media screen and (max-width: 466px) {
+    margin-top: 15%;
+    margin-left: 23%;
+    font-size: 14px;
+
+  }
+
 }
 .main {
 
@@ -202,6 +239,12 @@ body{
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 70px;
+  @media screen and (max-width: 566px) {
+    font-size: 36px;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 30px;
+  }
 }
 .advantages--flex-wrap {
   display: flex;
@@ -213,7 +256,9 @@ body{
   justify-content: space-between;
   display: flex;
   flex-flow: row wrap;
-
+  @media screen and (max-width: 1153px) {
+    justify-content: center;
+  }
 
 }
 .advantages__item {
@@ -222,22 +267,36 @@ body{
   min-height: 131px;
   display: flex;
   flex-flow: row nowrap;
-
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
   margin-bottom: 40px;
-  background: white url("../img/icons.png") no-repeat 380px 10px;
-  &:nth-child(2) {
-    background: white url("../img/icons.png") no-repeat -257px 0px;
+  &:nth-child(1) img {
+    margin-top: 6px;
   }
-  &:nth-child(3) {
-    background: white url("../img/icons.png") no-repeat 380px -171px;
+  &:nth-child(2) img {
+    margin-top: -14px;
   }
-  &:nth-child(4) {
-    background: white url("../img/icons.png") no-repeat -238px -175px;
+  &:nth-child(3) img {
+    margin-left: 25px;
+  }
+  &:nth-child(4) img {
+    height: 103%;
+  }
+  @media screen and (max-width: 580px) {
+    flex: 1 1 100%;
+    .advantages__item img {
+      flex: 1 1 10%;
+    }
+  /*  margin-top: 15%;
+    margin-left: 23%;
+    font-size: 14px;*/
+  }
+  /*@media screen and (max-width: 320px) {
+    width: 100%;
 
-  }
+  }*/
+
 }
 .advantages__number {
   font-size: 92px;
@@ -245,6 +304,10 @@ body{
   margin-left: 50px;
   margin-right: 50px;
   align-self: flex-end;
+  @media screen and (max-width: 580px) {
+      margin-left: 1%;
+      margin-right: 2%;
+  }
 }
 .advantages__text {
   margin: 0;
@@ -253,14 +316,20 @@ body{
   font-family: Roboto;
   font-size: 27px;
   font-weight: 100;
+  @media screen and (max-width: 580px) {
+    font-size: 2vh;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 18px;
+  }
 
 }
 .footer{
   display: flex;
   justify-content: center;
-
   background-color: #3c3cce;
   padding-bottom: 70px;
+
 }
 .footer--flex-wrap {
   display: flex;
@@ -268,6 +337,14 @@ body{
   flex-flow: row nowrap;
   flex: 0 0 830px;
   align-items: center;
+ @media screen and (max-width: 1153px) {
+   flex: 0 0 auto;
+   flex-flow: row wrap;
+   justify-content: center;
+  }
+  @media screen and (max-width: 476px) {
+    flex: 0 0 100%;
+  }
 }
 .footer__button {
   flex-basis: 445px;
@@ -290,6 +367,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 1153px) {
+    margin-right: 0px;
+    align-content: center;
+    margin: auto;
+    margin-bottom: 25px;
+  }
 }
 #clockdivBottom {
   flex-basis: 331px;
@@ -298,6 +382,10 @@ body{
   font-family: "Swiss721 B T";
   font-size: 59px;
   font-weight: 900;
+  @media screen and (max-width: 1153px) {
+    flex-basis: auto;
+   margin: auto;
+  }
 }
 
 
